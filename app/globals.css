@@ -911,7 +911,7 @@ input {
 @media (max-width: 720px) {
   .page-frame {
     width: min(100vw - 1rem, 100%);
-    padding-bottom: 13rem;
+    padding-bottom: 7rem;
   }
 
   .topbar__inner,
@@ -963,13 +963,30 @@ input {
   }
 
   .sticky-player {
-    gap: 0.65rem;
-    padding: 0.7rem;
+    grid-template-columns: 1fr;
+    gap: 0.35rem;
+    padding: 0.5rem 0.65rem;
+  }
+
+  .sticky-player__track,
+  .sticky-player__meta {
+    display: none;
+  }
+
+  .sticky-player__transport {
+    gap: 0.35rem;
   }
 
   .transport-buttons {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.3rem;
+  }
+
+  .transport-button {
+    min-height: 2rem;
+    padding: 0.4rem 0.5rem;
+    font-size: 0.78rem;
   }
 
   .topbar__nav {
