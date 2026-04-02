@@ -84,7 +84,7 @@ export const mixtape: Mixtape = {
       id: "track-09",
       number: 9,
       title: "Spongebob",
-      duration: "2:28",
+      duration: "2:29",
       mp3Url: "/assets/09-spongebob.mp3",
     },
     {

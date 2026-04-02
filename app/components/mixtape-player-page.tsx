@@ -435,7 +435,7 @@ export default function MixtapePlayerPage({ mixtape }: { mixtape: Mixtape }) {
               type="button"
               onClick={() => void playMixtape()}
             >
-              {isPlaying ? "Pauza" : "Odtwórz"}
+              {isPlaying ? "⏸ Pauza" : "▶ Odtwórz"}
             </button>
           </div>
         </div>
@@ -474,7 +474,7 @@ export default function MixtapePlayerPage({ mixtape }: { mixtape: Mixtape }) {
                   onClick={() => void toggleTrackPlayback(track.id)}
                 >
                   <span className="track-row__play" aria-hidden="true">
-                    {isActive && isPlaying ? "II" : ">"}
+                    {isActive && isPlaying ? "⏸" : "▶"}
                   </span>
                   <span className="track-row__number">
                     {track.number.toString().padStart(2, "0")}
@@ -524,7 +524,7 @@ export default function MixtapePlayerPage({ mixtape }: { mixtape: Mixtape }) {
                 onClick={() => stepTrack(-1)}
                 disabled={!hasPreviousTrack}
               >
-                Wstecz
+                ⏮
               </button>
               <button
                 type="button"
@@ -532,7 +532,7 @@ export default function MixtapePlayerPage({ mixtape }: { mixtape: Mixtape }) {
                 onClick={() => void playMixtape()}
                 disabled={!activeTrack}
               >
-                {isPlaying ? "Pauza" : "Play"}
+                {isPlaying ? "⏸" : "▶"}
               </button>
               <button
                 type="button"
@@ -540,7 +540,7 @@ export default function MixtapePlayerPage({ mixtape }: { mixtape: Mixtape }) {
                 onClick={() => stepTrack(1)}
                 disabled={!hasNextTrack}
               >
-                Dalej
+                ⏭
               </button>
             </div>
 
@@ -581,7 +581,7 @@ export default function MixtapePlayerPage({ mixtape }: { mixtape: Mixtape }) {
                 className="transport-button transport-button--quiet"
                 onClick={() => setIsMuted((currentMuted) => !currentMuted)}
               >
-                {isMuted ? "Unmute" : "Mute"}
+                {isMuted ? "🔇" : "🔊"}
               </button>
               <label className="sr-only" htmlFor={volumeId}>
                 Volume
